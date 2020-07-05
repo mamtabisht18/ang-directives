@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngif-detail.component.scss']
 })
 export class NgifDetailComponent implements OnInit {
-  loggedIn = false
+  loggedIn = true
   users = [
     {id: 1, name: 'User 1', profile: 'https://picsum.photos/50'},
     {id: 2, name: 'User 2', profile: ''},
@@ -16,6 +16,9 @@ export class NgifDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
+
 
 }
