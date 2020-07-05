@@ -1,0 +1,7 @@
+.user{
+    display: flex;
+
+    .id, .username, .user-img{
+        flex: 1;
+    }
+}

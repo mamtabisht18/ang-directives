@@ -1,0 +1,28 @@
+<p>ngfor-detail works!</p>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Index</th>
+        <th>odd</th>
+        <th>Even</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let user of users; let i = index; let odd = odd;  let even = even; let first = first;  let last = last">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.role}}</td>
+        <td>{{i}}</td>
+        <td>{{odd}}</td>
+        <td>{{even}}</td>
+        <td>{{first}}</td>
+        <td>{{last}}</td>
+        <td>
+            <button (click)="add()">Add</button>
+            <button (click)="delete(i)">Delete</button>
+        </td>
+    </tr>
+</table>

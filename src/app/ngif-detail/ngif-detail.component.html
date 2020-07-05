@@ -1,0 +1,43 @@
+<h1>Example 1</h1>
+
+<div *ngIf="loggedIn">
+    Welcome User
+</div>
+
+<div *ngIf="!loggedIn">
+    Login to continue
+</div>
+<!-- <div *ngIf="loggedIn; else loggedOut">
+      Welcome User  
+</div>
+<ng-template #loggedOut>
+    <div>
+        Login to continue
+    </div>
+</ng-template> -->
+<h1>Example 2</h1>
+<ul>
+    <li *ngFor="let user of users">
+        <div class="user">
+            <div class="id">
+                {{user.id}}
+            </div>
+            <div class="username">
+                {{user.name}}
+            </div>
+            <div class="user-img">
+               <img  *ngIf="user.profile" [src]="user.profile"/>
+               <img  *ngIf="!user.profile" src="../../../assets/avatar.png" width="50" height="50"/>
+            </div>
+        </div>
+        
+    </li>
+</ul>
+
+
+<a href="https://angular.io/api/common/NgIf">Detail</a>
+
+<!-- <img  *ngIf="user.profile; else avator" [src]="user.profile"/> -->
+<ng-template #avator> 
+    <img  src="../../../assets/avatar.png" width="50" height="50"/>
+</ng-template>
